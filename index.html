@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body{
+  font-family: 'Manrope', sans-serif;
+  background-color: #28282B;
+  color: #FFF;
+}
+.container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.timelines{
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+h1{
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+p{
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 25px;
+}
+.timelines ul li{
+  background-color: #1B1212;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.timelines ul li:last-child{
+  margin-bottom: 0;
+}
+@media screen and (min-width:768px) {
+  .timelines::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: gray;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .timelines ul li{
+    width: 50%;
+    position: relative;
+    margin-bottom: 20px;
+    transition: .3s ease;
+  }
+  .timelines ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+  }
+  .timelines ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+  }
+  .timelines ul li::after{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: gray;
+    top: 0;
+  }
+  .timelines ul li:nth-child(odd)::after{
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timelines ul li:nth-child(even)::after{
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timelines ul li:hover::after{
+    background-color: crimson;
+  }
+
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="timelines">
+        <ul>
+          <li>
+            <div class="timeline">
+              <h1>ONE</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                repudiandae temporibus iste, dolore obcaecati soluta.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline">
+              <h1>ONE</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                repudiandae temporibus iste, dolore obcaecati soluta.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline">
+              <h1>ONE</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                repudiandae temporibus iste, dolore obcaecati soluta.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline">
+              <h1>ONE</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                repudiandae temporibus iste, dolore obcaecati soluta.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

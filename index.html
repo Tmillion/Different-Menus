@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+        #check{
+            display: none;
+        }
+        .hamburger{
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            position: relative;
+            cursor: pointer;
+        }
+        .bun{
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            top: .8rem;
+            left: .8rem;
+            transition: transform .18s cubic-bezier(.4, .4, .12, .96) .15s;
+        }
+        .bun_creast{
+            display: block;
+            width: 2rem;
+            height: 2px;
+            background-color: #333;
+            left: .5rem;
+            position: absolute;
+            transition: transform .16s cubic-bezier(.54, .16, .54, .84) .2s;
+        }
+        .bun_creast_top{
+            top: 1.4rem;
+            transform: translateY(-4px);
+        }
+        .bun_creast_bottom{
+            bottom: 1.4rem;
+            transform: translateY(4px);
+        }
+        #check:checked ~ .hamburger .bun_top{
+            transform: rotate(45deg);
+        }
+        #check:checked ~ .hamburger .bun_bottom{
+            transform: rotate(-45deg);
+        }
+        #check:checked ~ .hamburger .bun_creast_top,
+        #check:checked ~ .hamburger .bun_creast_bottom{
+            transform: none;
+            transition: transform .18s cubic-bezier(.4, .4, .12, .96);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="hamburger">
+            <span class="bun bun_top">
+                <span class="bun_creast bun_creast_top"></span>
+            </span>
+            <span class="bun bun_bottom">
+                <span class="bun_creast bun_creast_bottom"></span>
+            </span>
+        </label>
+    </div>
+
+    <!-- <script src="menu.js"></script> -->
+</body>
+</html>
